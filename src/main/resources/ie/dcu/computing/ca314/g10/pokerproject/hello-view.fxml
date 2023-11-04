@@ -12,7 +12,7 @@
     </padding>
 
     <Label fx:id="welcomeText"/>
-    <Button text="Join Game" onAction="#onJoinGameClick"/>
-    <Button text="Options" onAction="#onHelloButtonClick"/>
-    <Button text="Exit" onAction="#onHelloButtonClick"/>
+    <Button text="JOIN GAME" onAction="#onJoinGameClick"/>
+    <Button text="OPTIONS" onAction="#onHelloButtonClick"/>
+    <Button text="EXIT" onAction="#onHelloButtonClick"/>
 </VBox>
