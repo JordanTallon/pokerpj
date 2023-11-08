@@ -2,27 +2,53 @@ package ie.dcu.computing.ca314.g10.pokerproject.player;
 
 import ie.dcu.computing.ca314.g10.pokerproject.core.Hand;
 import ie.dcu.computing.ca314.g10.pokerproject.interfaces.Playable;
+
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+
 import java.util.List;
 public class Player implements Playable {
+
+    /**  Coordinates for rendering the player board */
+    private double xPosition;
+    private double yPosition;
+
+    /** Player pane, contains all player CSS */
+    public StackPane container;
+
     /** The name displayed for the player. */
     private String displayName;
-    /** The total amount of chips the player
-     has. */
+    /** The total amount of chips the player has. */
     public int chipsAmount;
-    /** List of individual chip objects the
-     player has. */
-    public List < Chip > chips;
-    /** The hand of cards assigned to the
-     player. */
+    /** List of individual chip objects the player has. */
+    public List <Chip> chips;
+    /** The hand of cards assigned to the player. */
     public Hand hand;
+
+    public Player (String displayName, int startingChips, int x, int y){
+        this.displayName = displayName;
+        this.chipsAmount = startingChips;
+        buildContainer();
+        setPosition(x, y);
+    }
+
+    /** Create the player container */
+    public void buildContainer() {
+        this.container = new StackPane();
+        this.container.getStyleClass().add("player-container");
+    }
+
+    /**  Method to update the position if needed. (maybe when a player joins or leaves) */
+    public void setPosition(double x, double y) {
+        this.xPosition = x;
+        this.yPosition = y;
+        this.container.setTranslateX(xPosition);
+        this.container.setTranslateY(yPosition);
+    }
+
     /**
      * Allows the player to check.
      */
-
-    public Player (String displayName, int startingChips){
-        this.displayName = displayName;
-        this.chipsAmount = startingChips;
-    }
     @Override
     public void check() {
         // TODO
