@@ -2,9 +2,12 @@ package ie.dcu.computing.ca314.g10.pokerproject;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
 
+import java.io.IOException;
 import java.util.Optional;
 
 public class MenuController {
@@ -38,6 +41,25 @@ public class MenuController {
 
             // Set player name
             System.out.println("Your name: " + name);
+
+
+            try {
+                // Load the Game scene
+                FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("game-view.fxml"));
+                // This loads the FXML file and initializes the controller
+                Parent gameView = gameLoader.load();
+
+                // Retrieve the controller
+                GameController gameController = gameLoader.getController();
+                // Pass player's name to the Game scene
+                gameController.setPlayerName(name);
+
+                // Get the current scene and set the root to the loaded FXML
+                welcomeText.getScene().setRoot(gameView);
+            } catch (IOException e) {
+                // I don't think this should ever trigger but just in case let's naively print a stack trace :D.
+                e.printStackTrace();
+            }
         }
     }
 

@@ -1,10 +1,19 @@
 .root{
+    -fx-font-size: 28px;
+}
+
+#menuBackground{
     -fx-background-image: url('../art/ui/background.png');
+}
+
+#tableBackground{
+    -fx-background-image: url('../art/table/table_bg.png');
+}
+
+#menuBackground, #tableBackground{
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
     -fx-background-position: center center;
-
-    -fx-font-size: 28px;
 }
 
 .button {
