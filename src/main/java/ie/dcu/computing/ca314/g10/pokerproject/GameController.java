@@ -28,9 +28,9 @@ public class GameController {
 
     // Handle this on server side only later?
     private void addNewPlayer(String displayName){
-        localPlayer = new Player(displayName, startingChips, 0, 0);
+        localPlayer = new Player(displayName, startingChips, 0, 350);
         System.out.println(localPlayer.getDisplayName());
-        // Add the player's Container container to the scene
+        // Add the player's container to the scene
         tableBackground.getChildren().add(localPlayer.container);
     }
 }

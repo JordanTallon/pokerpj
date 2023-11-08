@@ -26,7 +26,6 @@ public class MenuController {
         dialog.setHeaderText(null);
         dialog.setContentText("Please enter your name:");
 
-
         Optional<String> result = dialog.showAndWait();
 
         if(result.isPresent()){

@@ -13,10 +13,10 @@ public class Game extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("menu-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
-
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/style.css")).toExternalForm());
 
         stage.setTitle("G10 Poker");
+        stage.setFullScreen(false);
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
