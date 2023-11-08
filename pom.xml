@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                ie.dcu.computing.ca314.g10.pokerproject/ie.dcu.computing.ca314.g10.pokerproject.HelloApplication
+                                ie.dcu.computing.ca314.g10.pokerproject/ie.dcu.computing.ca314.g10.pokerproject.Game
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

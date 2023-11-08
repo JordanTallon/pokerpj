@@ -6,7 +6,7 @@
 
 <?import javafx.scene.control.Button?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="ie.dcu.computing.ca314.g10.pokerproject.HelloController">
+      fx:controller="ie.dcu.computing.ca314.g10.pokerproject.MenuController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
@@ -14,5 +14,5 @@
     <Label fx:id="welcomeText"/>
     <Button text="JOIN GAME" onAction="#onJoinGameClick"/>
     <Button text="OPTIONS" onAction="#onHelloButtonClick"/>
-    <Button text="EXIT" onAction="#onHelloButtonClick"/>
+    <Button text="EXIT" onAction="#onExitClick"/>
 </VBox>

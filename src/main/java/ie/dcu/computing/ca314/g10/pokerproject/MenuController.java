@@ -1,12 +1,13 @@
 package ie.dcu.computing.ca314.g10.pokerproject;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
 
 import java.util.Optional;
 
-public class HelloController {
+public class MenuController {
     @FXML
     private Label welcomeText;
 
@@ -38,5 +39,10 @@ public class HelloController {
             // Set player name
             System.out.println("Your name: " + name);
         }
+    }
+
+    @FXML
+    protected  void onExitClick(){
+        Platform.exit();
     }
 }
