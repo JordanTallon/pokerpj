@@ -18,6 +18,11 @@ public class Player implements Playable {
     /**
      * Allows the player to check.
      */
+
+    public Player (String displayName, int startingChips){
+        this.displayName = displayName;
+        this.chipsAmount = startingChips;
+    }
     @Override
     public void check() {
         // TODO
