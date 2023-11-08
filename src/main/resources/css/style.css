@@ -1,5 +1,6 @@
 .root{
     -fx-font-size: 28px;
+    -fx-font-weight: bold;
 }
 
 #menuBackground{
@@ -17,7 +18,6 @@
 }
 
 .button {
-    -fx-font-weight: bold;
     -fx-background-color: #FFFFFF;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 0, 0, 4, 4);
 
@@ -29,9 +29,28 @@
 }
 
 .player-container {
-    -fx-background-color: #336699;
-    -fx-border-color: black;
-    -fx-border-width: 2px;
-    -fx-max-width: 100px;
-    -fx-pref-height: 200px;
+    -fx-background-image: url('../art/player/player_board.png');
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-max-width: 258px;
+    -fx-max-height: 258px;
+    -fx-min-width: 258px;
+    -fx-min-height: 258px;
+}
+
+.player-name, .player-total, .player-action{
+    -fx-text-fill: #FFFFFF;
+}
+.player-name{
+    -fx-font-weight: normal;
+    -fx-font-size: 16px;
+}
+
+.player-total{
+    -fx-font-size: 20px;
+}
+
+.player-action{
+    -fx-font-size: 13px;
 }
